@@ -1,0 +1,293 @@
+/* Reset & Pengaturan Dasar */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #070510;
+    background-image: 
+        linear-gradient(rgba(236, 72, 153, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+    background-size: 35px 35px;
+    color: #e2e8f0;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    margin: 0;
+}
+
+/* Header & HUD Bar */
+.ai-header {
+    background: radial-gradient(circle at top, #1e112a 0%, #070510 100%);
+    border-bottom: 2px solid #ec4899;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.18);
+}
+
+.hud-bar {
+    background: rgba(236, 72, 153, 0.12);
+    color: #f472b6;
+    font-size: 0.78rem;
+    padding: 8px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #10b981;
+    margin-right: 6px;
+}
+
+.hero-content {
+    padding: 55px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.6rem;
+    background: linear-gradient(to right, #f472b6, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(244, 114, 182, 0.35);
+    letter-spacing: 3px;
+    margin: 0 0 10px 0;
+}
+
+.hero-content p {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #94a3b8;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* Navigasi Sticky */
+.ai-nav {
+    background: rgba(7, 5, 16, 0.92);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-top: 1px solid rgba(236, 72, 153, 0.25);
+}
+
+.ai-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.ai-nav ul li a {
+    display: block;
+    color: #f472b6;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 0.88rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.ai-nav ul li a:hover {
+    background: rgba(236, 72, 153, 0.2);
+    color: #ffffff;
+    box-shadow: inset 0 -3px 0 #f472b6;
+}
+
+/* Layout Utama */
+.container {
+    max-width: 1180px;
+    margin: 40px auto;
+    padding: 0 20px;
+    overflow: auto;
+}
+
+#content {
+    float: left;
+    width: 71%;
+}
+
+aside {
+    float: right;
+    width: 26%;
+}
+
+/* Kartu Minuman AI */
+.ai-card {
+    background: rgba(18, 14, 32, 0.88);
+    border: 1px solid rgba(236, 72, 153, 0.35);
+    border-left: 4px solid #ec4899;
+    border-radius: 6px;
+    padding: 22px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.08);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-card:hover {
+    transform: translateX(6px);
+    border-color: #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: #f472b6;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed rgba(236, 72, 153, 0.3);
+}
+
+.card-body img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgba(244, 114, 182, 0.4);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.card-text h2 {
+    color: #ffffff;
+    font-size: 1.45rem;
+    margin: 0 0 10px 0;
+}
+
+.card-text .tag {
+    color: #38bdf8;
+    font-size: 0.85rem;
+}
+
+.card-text p {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+/* Sidebar Profil Scanner */
+.profile-card {
+    background: rgba(18, 14, 32, 0.92);
+    border: 1px solid #ec4899;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.15);
+}
+
+.scanner-label {
+    background: rgba(236, 72, 153, 0.2);
+    color: #f472b6;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(236, 72, 153, 0.4);
+}
+
+.avatar-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 2px solid #f472b6;
+    margin-bottom: 14px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Animasi Scan-line */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #38bdf8;
+    box-shadow: 0 0 10px #38bdf8;
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% { top: 0%; }
+    50% { top: 98%; }
+    100% { top: 0%; }
+}
+
+.profile-card h2 {
+    color: #ffffff;
+    margin: 0 0 4px 0;
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+}
+
+.profile-card .role {
+    font-family: system-ui, sans-serif;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin: 0 0 15px 0;
+}
+
+.stats-box {
+    background: rgba(7, 5, 16, 0.75);
+    border: 1px solid rgba(236, 72, 153, 0.25);
+    border-radius: 4px;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 0.78rem;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    color: #94a3b8;
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-item .online {
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #04030a;
+    color: #f472b6;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.82rem;
+    letter-spacing: 1.5px;
+    clear: both;
+    border-top: 1px solid rgba(236, 72, 153, 0.3);
+    margin-top: 40px;
+}
+
+/* Responsif Layar HP */
+@media screen and (max-width: 768px) {
+    #content, aside {
+        float: none;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+}
